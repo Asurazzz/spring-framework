@@ -63,6 +63,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * log warnings from {@code getenv} calls coming from Spring, e.g. on WebSphere
 	 * with strict SecurityManager settings and AccessControlExceptions warnings.
 	 * @see #suppressGetenvAccess()
+	 * 设置忽略的属性值
 	 */
 	public static final String IGNORE_GETENV_PROPERTY_NAME = "spring.getenv.ignore";
 
@@ -74,6 +75,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * is in use, this property may be specified as an environment variable as
 	 * {@code SPRING_PROFILES_ACTIVE}.
 	 * @see ConfigurableEnvironment#setActiveProfiles
+	 * spring.profiles的哪个文件是激活的状态
 	 */
 	public static final String ACTIVE_PROFILES_PROPERTY_NAME = "spring.profiles.active";
 
@@ -85,6 +87,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * is in use, this property may be specified as an environment variable as
 	 * {@code SPRING_PROFILES_DEFAULT}.
 	 * @see ConfigurableEnvironment#setDefaultProfiles
+	 * 默认使用的文件
 	 */
 	public static final String DEFAULT_PROFILES_PROPERTY_NAME = "spring.profiles.default";
 
@@ -386,6 +389,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	@SuppressWarnings({"rawtypes", "unchecked"})
 	public Map<String, Object> getSystemProperties() {
 		try {
+			// 获取当前系统的环境值
 			return (Map) System.getProperties();
 		}
 		catch (AccessControlException ex) {
@@ -415,6 +419,7 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 			return Collections.emptyMap();
 		}
 		try {
+			// 获取某些环境值
 			return (Map) System.getenv();
 		}
 		catch (AccessControlException ex) {

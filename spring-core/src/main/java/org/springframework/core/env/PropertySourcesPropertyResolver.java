@@ -76,6 +76,7 @@ public class PropertySourcesPropertyResolver extends AbstractPropertyResolver {
 
 	@Nullable
 	protected <T> T getProperty(String key, Class<T> targetValueType, boolean resolveNestedPlaceholders) {
+		// 如果一个资源不为空，开始进行for循环
 		if (this.propertySources != null) {
 			for (PropertySource<?> propertySource : this.propertySources) {
 				if (logger.isTraceEnabled()) {
