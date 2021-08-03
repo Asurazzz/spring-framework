@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Test {
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		MyClassPathXmlApplicationContext ac = new MyClassPathXmlApplicationContext("applicationContext.xml");
 		User user = (User) ac.getBean("ymj");
 		System.out.println("=============");
 		System.out.println(user.getUsername());

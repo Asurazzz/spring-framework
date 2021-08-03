@@ -6,7 +6,9 @@
 		http://www.ymj.com/schema/user http://www.ymj.com/schema/user.xsd
 		">
 
-	<ymj:user ymj:id="ymj" ymj:userName="lian" ymj:email="ymj@qq.com" ymj:password="123456"/>
+	<ymj:user id="ymj" userName="lian" email="lian@ymj.com"/>
+<!--	    <msb:user id="msb" userName="lian" email="lian@msb.com" password="123456"></msb:user>-->
 
-<!--	<bean id="myTestBean" class="com.ymj.MyTestBean"/>-->
+
+	<!--	<bean id="myTestBean" class="com.ymj.MyTestBean"/>-->
 </beans>
