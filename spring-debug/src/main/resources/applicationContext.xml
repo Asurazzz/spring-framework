@@ -10,5 +10,5 @@
 <!--	    <msb:user id="msb" userName="lian" email="lian@msb.com" password="123456"></msb:user>-->
 
 
-	<!--	<bean id="myTestBean" class="com.ymj.MyTestBean"/>-->
+		<bean id="myTestBean" class="com.ymj.MyTestBean"/>
 </beans>
